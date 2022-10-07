@@ -1,0 +1,688 @@
+<html>
+<head>
+
+<title>Давлетшин - Быстрый доступ</title>
+
+<style rel="stylesheeet">
+body {
+	font-family: Tahoma, Arial;
+	margin: 0px;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+h1 {
+	text-align: center;
+	width: 100%;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+ul {
+	list-style: none;
+}
+div {
+	width: 100%;
+	font-size: 100%;
+}
+.necessary_data {
+	display: none;
+}
+.outcall_script {
+	line-height: 20px;
+	font-size: 12px;
+	font-family: Tahoma, Times New Roman, Comic Sans MS;
+	text-align: justify;
+}
+#first {
+	width: 50%;
+	text-align: center;
+}
+#first > select, #first > input {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+#first > select {
+	text-align-last: center;
+	appearance: none;
+	height: 50px;
+	border-color: #FF8E49;
+	border-width: 2px;
+	border-radius: 20px;
+	padding: 10px;
+}
+#first > input {
+	border-radius: 20px;
+	color: #FF8E49;
+	background-color: #FFFFFF;
+	border-color: #FF8E49;
+	padding: 5px;
+}
+#second{
+	width: 40%;
+}
+#all {
+	width: 100%;
+	display: flex;
+	flex: 1 0 auto;
+}
+header {
+	padding-top: 1%;
+	padding-bottom: 10%;
+	width: 100%;
+	background: linear-gradient(180deg, #FF8E49 10%, #FFFFFF 90%);
+	color: #FFFFFF;
+	height: 100px;
+}
+footer {
+	flex-shrink: 0;
+	padding-top: 10%;
+	width: 100%;
+	background: linear-gradient(0deg, #FF8E49 10%, #FFFFFF 90%);
+	color: #FFFFFF;
+	height: 100px;
+}
+.access_list > div {
+	list-style: circle;
+}
+input[type="text"] {
+	width: 80%;
+	margin-bottom: 5px;
+}
+#lock {
+	margin-left: 5%;
+	width: 95%;
+}
+#schedule {
+	width: 50%;
+	margin-top: 50px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	margin-left: auto;
+	margin-right: auto;
+}
+#schedule > div {
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.time_codes_cont {
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+}
+.time_codes {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+#chill_notification, #break_notification {
+	width: 100%;
+}
+#notification_cont {
+	text-align: center;
+	width: 100%;
+	font-size: 48px;
+}
+.Okay {
+	width: 20%;
+}
+#time_show {
+	font-size: 32px;
+	margin-top: 50px;
+}
+#changed {
+	display: none;
+}
+#time_block {
+	width: 100%;
+}
+#time_block > div {
+	text-align: center;
+}
+
+#textarea_cont {
+	margin_top: 10px;
+	width: 100%;
+}
+.text_cont {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+.sections_names_cont > input {
+	display: none;
+}
+.sections_names_cont > label {
+	display: block;
+	text-align: center;
+	background-color: #FFFFFF;
+	color: #FF8E49;
+	width: 50%;
+	padding: 5px;
+	margin-top: 5px;
+	border: 2px solid #FF8E49;
+	border-radius: 50px;
+}
+.sections_names_cont > label:hover, .sections_names_cont > input:checked + label {
+	cursor: pointer;
+	background-color: #FF8E49;
+	color: #FFFFFF;
+}
+
+</style>
+
+</head>
+
+<body vlink="#000000" link="#000000" alink="#000000">
+
+<header>
+<div id="lock">
+	<h2>Введите пароль:</h2>
+	<input type="password" name="password_for_necessary_info">
+	<input type="button" name="TtAtND" value="Отправить">
+</div>
+<div class="necessary_data">
+	<h1>Логин: op11534nk</h1>
+	<h1>Пароль: chieN7ei</h1>
+</div>
+</header>
+<div id="all">
+	<div id="first">
+		<div><h2>Карты:</h2></div>
+		<select id="map_cont" size="1">
+		</select>
+		<input type="button" name="enter_to_map" value="Перейти к карте">
+	<div id="schedule">
+		<div id="main_caption">
+			Перерывы и обеды (писать только начало)
+		</div>
+		<div class="captions">
+			Перерывы:
+		</div>
+		<div class="time_codes_cont">
+			<div class="time_codes">
+				<input type="text" name="chill" maxlength="5" <!--autofocus-->
+			</div>
+			<div class="time_codes">
+				<input type="text" name="chill" maxlength="5">
+			</div>
+		</div>
+		<div class="time_codes_cont">
+			<div class="time_codes">
+				<input type="text" name="chill" maxlength="5">
+			</div>
+			<div class="time_codes">
+				<input type="text" name="chill" maxlength="5">
+			</div>
+		</div>
+		<div class="captions">
+			Обеды:
+		</div>
+		<div class="time_codes_cont">
+			<div class="time_codes">
+				<input type="text" name="break" maxlength="5">
+			</div>
+			<div class="time_codes">
+				<input type="text" name="break" maxlength="5">
+			</div>
+		</div>
+		<div id="button">
+			<input type="submit" name="confirm" value="Принять">
+		</div>
+		<div id="time_block">
+			<div id="time_show">
+			</div>
+			<div id="changed">
+				Изменено
+			</div>
+		</div>
+	</div>
+	<div id="notification">
+		<div id="notification_cont">
+			<div id="notify_text"></div>
+			<input type='button' name='Okay' id='Okay' value='Окей'>
+		</div>
+	</div>
+</div>
+
+<div id="second">
+	<div><h2>Разделы:</h2>
+		<div class="sections_names_cont">
+			<input type="radio" name="second_select" value="0" id="second_select1">
+			<label for="second_select1" class="section_name"><span>Исход</span></label>
+		</div>
+		<div class="sections_names_cont">
+			<input type="radio" name="second_select" value="1" id="second_select2">
+			<label for="second_select2" class="section_name"><span>Тикеты</span></label>
+		</div>
+		<div class="sections_names_cont">
+			<input type="radio" name="second_select" value="2" id="second_select3">
+			<label for="second_select3" class="section_name"><span>Шаблоны</span></label>
+		</div>
+		<div class="sections_names_cont">
+			<input type="radio" name="second_select" value="3" id="second_select4">
+			<label for="second_select4" class="section_name"><span>Поддержка</span></label>
+		</div>
+		<div class="sections_names_cont">
+			<input type="radio" name="second_select" value="4" id="second_select5">
+			<label for="second_select5" class="section_name"><span>Детский тариф</span></label>
+		</div>
+	</div>
+	<div class="second_select">
+		<div><h2>Номера для переводов:</h2></div>
+		<div class="outcall_script">1. Служба поддержки водителей 88000040008</div>
+		<div class="outcall_script">2. Служба поддержки таксопарков 88000040009</div>
+		<div class="outcall_script">3. Служба поддержки пользователей 88000044000</div>
+		<div class="outcall_script">4. Связаться по вопросам безопасности 88000040001</div>
+		<div class="outcall_script">5. Официальный сайт https://kz.didiglobal.com/</div>
+		<div class="outcall_script">6. С полными условиями для водителей-партнеров вы можете ознакомиться на нашем официальном сайте https://kz.didiglobal.com/legal/</div>
+		<div class="outcall_script">7. Вы можете зарегистрироваться в качестве таксопарка через наш официальный сайт https://kz.didiglobal.com/legal/</div>
+		<div class="outcall_script">8. для СМИ eecapr@didiglobal.com</div> 
+		<div><h2>Скрипт для обзвона</h2></div>
+		<div class="outcall_script">Здравствуйте. Меня зовут Линар. Я из компании DiDi. Вы зарегистрировали номер телефона в DiDi в качестве водителя, и мы видим, что ваши документы не были загружены или не прошли проверку. Уточните, пожалуйста, для вас регистрация всё ещё актуальна?</div>
+		<br>
+		<div class="outcall_script">(номер для обращения казахов в службу поддержки DiDi: 88002431001)</div>
+		<br>
+		<div class="outcall_script">Для регистрации вы можете перейти на ссылку регистрации через приложение DiDi Водитель или через наш официальный сайт kz.didiglobal.com</div>
+		<div class="outcall_script">После того, как вы введёте свой номер телефона и пароль, вы попадёте на список документов и их статусы. Уведомляем, что нужно загрузить обе стороны ВУ. Фотографии должны быть:</div>
+		<ul class="access_list outcall_script">
+			<li>чёткими</li>
+			<li>без вспышки</li>
+			<li>документ должен попадать полностью в кадр</li>
+			<li>нужно загрузить именно фотографию ВУ, скриншот или сканкопия не допускаются</li>
+		</ul>
+		<br>
+		<div class="outcall_script">В поле Паспорт или Удостоверение Личности можно загрузить ВУ, а затем ввести свой ИНН или номер паспорта</div>
+		<div class="outcall_script">В поле Сэлфи с ВУ вы также можете загрузить фотографии ВУ</div>
+		<br>
+		<div class="outcall_script">В 12-24 часов мы проверим ваши документы и вы сможете подключиться. Пожалуйста, проверьте статус ваших документов через 24 часа по ссылке регистрации Водителя.</div>
+	</div>
+	<div class="second_select">
+		<div><h2>Ссылки:</h2></div>
+		<div><a href="https://nextcloud.calltraffic.ru/s/twWbjR7XJSLaG7G" target="_blank">Облако на исход</a></li>
+		<div>(Пароль: awgXEysz)</div>
+		<div>
+			<input type="button" name="cancel_rules" value="Правила отмены поездки">
+		</div>
+		<div>
+			<input type="text" name="costshow_template_name" placeholder="Введите имя">
+			<input type="button" name="costshow_template" value="Шаблон">
+			<input type="button" name="inner_comment" value="Внутр.прим">
+			<input type="button" name="payment_method" value="Изменение способа оплаты">
+		</div>
+		<div><h2>Порядок составления Lean-тикета</h2></div>
+		<div>
+			<input type="button" name="fix_instructions" value="Инструкция по починке">
+		</div>
+		<div>1. Если пользователь любого из приложений жалуется на технические сложности работы данных приложения, сотруднику линии поддержки необходимо рекомендовать прежде всего выполнить следующие шаги:</div>
+		<ul>
+			<li>1) Сложность при использовании на стационарном компьютере: Очистить файлы cookies/Использовать другой браузер/Выйти и снова войти в свой аккаунт;</li>
+			<li>2) Сложность при использовании приложения: Проверить подключение к интернету/ Очистить файлы cookies в приложении/ Выйти и снова войти в аккаунт/Переустановить приложение;</li>
+			<li>2. Если предыдущие рекомендации не помогли, такие обращения эскалируются супервайзеру, на основании данных в обращении супервайзер подтверждает Lean ticket в техническую поддержку.</li>
+		</ul>
+		</div>
+	</div>
+	<div class="second_select">
+		<div><h3>Анти-фрауд:</h3></div>
+			<div class="fraud">Не удалось оформить заказ.</div>
+			<div><h3>Город недоступен:</h3></div>
+				<div class="non-fraud">Клиент обращался из города, который не обслуживается DiDi Такси.</div>
+			<div><h3>Стоимость:</h3></div>
+				<div class="non-fraud">Пассажира не устроила стоимость поездки.</div>
+				<div class="info">Пассажир интересовался стоимостью поездки.</div>
+			<div><h3>Другие:</h3></div>
+				<div class="non-fraud">Не удалось оформить заказ из-за технических неполадок.</div>
+				<div class="non-fraud">Сброс вызова во время разговора.</div>
+				<div class="non-fraud">Сброс вызова до начала разговора.</div>
+				<div class="non-fraud">Не удалось оформить заказ, поскольку статус прошлого заказа клиента не был обновлён.</div>
+				<div class="info">Пассажир интересовался способами оплаты.</div>
+				<div class="non-fraud">Не устроил способ оплаты.</div>
+				<div class="non-fraud">Клиент пытался оформить заказ во время текущей поездки.</div>
+				<div class="non-fraud">Клиент хотел заказать услугу, которую не предоставляет DiDi Такси.</div>
+				<div class="non-fraud">Пассажир пытался оформить заказ на остановку.</div>
+				<div class="non-fraud">Пассажир хотел оформить несколько заказов на один номер одновременно.</div>
+				<div class="non-fraud">Несовершеннолетний пассажир без сопровождения.</div>
+				<div class="non-fraud">Пассажир отказался от поездки из-за отсутствия технической возможности указать подъезд дома.</div>
+				<div class="non-fraud">Пассажир отказался от поездки из-за отсутствия технической возможности указать комментарий.</div>
+				<div class="non-fraud">Пассажир хотел сделать заказ на несколько точек высадки.</div>
+				<div class="non-fraud">Пассажир отказался от заказа из-за отсутствия детского тарифа.</div>
+				<div class="info">Пассажир интересовался возможностью оформления заказа за черту города.</div>
+				<div class="non-fraud">Пассажир пытался оформить заказ за черту города.</div>
+				<div class="not-paid">Не удалось оформить заказ, поскольку у пассажира числились неоплаченные заказы.</div>
+				<div class="non-fraud">Нечеткая связь, разговор завершен.</div>
+				<div class="non-fraud">Пассажир хотел оформить доставку.</div>
+				<div class="non-fraud">Пассажир позвонил после отмены заказа. Отказался переоформлять заказ.</div>
+				<div class="non-fraud">Пассажир пытался оформить предварительный заказ.</div>
+				<div class="info">Пассажир интересовался возможностью предварительного заказа.</div>
+				<div class="non-fraud">Пассажир пытался заказать определённую машину.</div>
+				<div class="non-fraud">Перевод на сервисную службу не удался.</div>
+				<div class="non-fraud">Адрес не найден в системе. Заказ не оформлен.</div>
+				<div class="non-fraud">Пассажир ошибся номером.</div>
+				<div class="non-fraud">Пассажир не подтвердил заказ.</div>
+				<div class="non-fraud">Клиент не смог уточнить адрес.</div>
+				<div class="non-fraud">Поступил нецелевой звонок.</div>
+			<div><h3>СМС:</h3></div>
+				<div class="ride-info">Клиент не получил СМС о своём водителе. Интересуется деталями заказа.</div>
+			<div><h3>Информирование по деталям заказа:</h3></div>
+				<div class="ride-info">Клиент запросил информацию по деталям заказа.</div>
+			<div><h3>Отмена заказа:</h3></div>
+				<div class="cancel">Неверно указан адрес подачи, нужно отменить поездку.</div>
+				<div class="cancel">Клиент отказался от поездки после подтверждения.</div>
+	</div>
+	<div class="second_select">
+		<div><h2>Когда-нибудь ты уйдёшь отсюда...</h2></div>
+	</div>
+	<div class="second_select">
+		<div>
+			<h2>Города присутствия:</h2>
+			<div>Казань</div>
+			<div>Пенза</div>
+			<div>Уфа</div>
+			<div>Пермь</div>
+			<div>Красноярск</div>
+			<div>Стерлитамак</div>
+			<div>Киров</div>
+			<div>Тюмень</div>
+			<div>Воронеж</div>
+			<div>Саратов</div>
+			<div>Энгельс</div>
+		</div>
+		<div>
+			<h2>Сервис заказа такси по телефону временно недоступен, Вы можете заказать такси, скачав приложение DiDi. Приносим извинения за неудобства.</h2>
+		</div>
+	</div>
+	</div>
+</div>
+<footer>
+<h1>Создано Давлетшиным Линаром</h1>
+</footer>
+<script>
+	var password = document.getElementsByName("password_for_necessary_info")[0];
+	var try_to_access = document.getElementsByName("TtAtND")[0];
+	var necessary_data = document.getElementsByClassName("necessary_data")[0];
+	var counter = 0;
+	try_to_access.onclick = function() {
+		if (password.value == "Ненавижу всю эту хуйню блять!") {
+			document.getElementById("lock").style.display = "none";
+			necessary_data.style.display = "block";
+			hide = setTimeout(() => {
+				password.value = "";
+				document.getElementById("lock").style.display = "block";
+				necessary_data.style.display = "none";
+			}, 5000);
+		}
+		else {
+			counter++;
+			alert("Вы не смогли открыть данные "+counter+" раз :)");
+		}
+	}
+	var map_names = ["Астрахань", "Белгород", "Брянск", "Владимир", "Воронеж", "Иваново", "Ижевск", "Йошкар-Ола", "Казань", "Калуга", "Киров", "Кострома", "Краснодар", "Красноярск", "Курск", "Липецк", "Майкоп", "Набережные Челны", "Новороссийск", "Орёл", "Оренбург", "Пенза", "Пермь", "Рязань", "Саратов", "Смоленск", "Ставрополь", "Старый Оскол", "Стерлитамак", "Тамбов", "Тверь", "Тула", "Тюмень", "Уфа", "Чебоксары", "Чистополь", "Энгельс"];
+	var map_domens = ["astrakhan", "belgorod", "bryansk", "vladimir", "voronezh", "ivanovo", "izhevsk", "yoshkarola", "kazan", "kaluga", "kirov", "kostroma", "krasnodar", "krasnoyarsk", "kursk", "lipetsk", "maikop", "nabchelny", "novorossiysk", "orel", "orenburg", "penza", "perm", "ryazan", "saratov", "smolensk", "stavropol", "staroskol", "sterlitamak", "tambov", "tver", "tula", "tyumen", "ufa", "cheboksary", "geo/70030076128028289", "engels"];
+	var map_cont = document.getElementById("map_cont");
+	for (i=0; i<map_names.length; i++) {
+		map_cont.innerHTML += "<option class='map_link'>"+map_names[i]+"</option>";
+	}
+	document.getElementsByName("enter_to_map")[0].onclick = function() {
+		var selected = document.getElementById("map_cont").selectedIndex;
+		window.open("https://2gis.ru/"+map_domens[selected]);
+	}
+
+	document.getElementsByName("cancel_rules")[0].onclick = function() {
+		navigator.clipboard.writeText("-Плата за отмену поездки взимается, если в момент отмены прошло 10 минут с момента принятия заказа водителем;\n-Плата за отмену поездки взимается, если в момент отмены водитель уже прибыл к адресу подачи;\n-Если пассажир не появляется, и водитель ожидает на адресе подачи 8 минут, водитель имеет право отменить поездку. В таком случае также будет взиматься плата за отмену;");
+	}
+
+	document.getElementsByName("costshow_template")[0].onclick = function() {
+		var client_name = document.getElementsByName("costshow_template_name")[0].value;
+		navigator.clipboard.writeText("Здравствуйте, "+client_name+".\n\nВо время поездки в сведениях о заказе указывается полная стоимость поездки. Как только водитель завершит поездку в приложении, будет указана стоимость с учётом применённых купонов, которую необходимо оплатить. Обращаем ваше внимание на то, что, если стоимость поездки с учётом купона будет равна нулю, купон не будет учитываться при расчёте стоимости и сохранится до следующей поездки. В данном случае стоимость поездки составляет ХХ руб.\nЕсли у вас возникли дополнительные вопросы, мы будем рады вам помочь.");
+	}
+	
+	document.getElementsByName("inner_comment")[0].onclick = function() {
+		navigator.clipboard.writeText("Опишите запрос клиента\nПричина обращения: вопрос об отображении стоимости во время поездки\nДоговоренности / Решение: ответ выслан на эл.почту\nВыполните привязку соответствующего тикета и поездки.\nТекущий статус поездки в CS (если применимо):");
+	}
+	
+	document.getElementsByName("payment_method")[0].onclick = function() {
+		var client_name = document.getElementsByName("costshow_template_name")[0].value;
+		navigator.clipboard.writeText("Здравствуйте, "+client_name+".\n\nВ данный момент изменить способ оплаты возможно только до подтверждения заказа. Во время или по окончанию поездки изменить способ оплаты не удастся. Настоятельно советуем проверять способ оплаты перед подтверждением поездки.\nЕсли у вас возникли дополнительные вопросы, мы будем рады вам помочь.")
+	}
+
+	document.getElementsByName("fix_instructions")[0].onclick = function() {
+		var client_name = document.getElementsByName("costshow_template_name")[0].value;
+		navigator.clipboard.writeText("Здравствуйте, "+client_name+".\n\nДля решения данной проблемы рекомендуем выполнить следующие шаги:\n-Проверьте подключение к Интернету;\n-Очистите мусорные файлы cookie и cache;\n-Выйдите и войдите снова в свою учётную запись;\n-Переустановите приложение.\nЕсли данные инструкции не помогут вам в решении проблемы, пожалуйста, обратитесь к нам снова.");
+	}
+	
+	var section_names = document.getElementsByName("second_select");
+	var sections = document.getElementsByClassName("second_select");
+	var section_labels = document.getElementsByClassName("section_name");
+	for (i=0; i<sections.length; i++) {
+		sections[i].style.display = "none";
+	}
+	for (i=0; i<section_names.length; i++) {
+		section_names[i].onchange = function() {
+			var index = this.value;
+			for (j=0; j<section_names.length; j++) {
+				if (j==index) {
+					sections[j].style.display = "block";
+				}
+				if (j!=index) {
+					sections[j].style.display = "none";
+				}
+			}
+		}
+	}
+
+	var list = document.getElementById("second");
+	var items = list.getElementsByTagName("li");
+	list.addEventListener('copy', function(event) {
+		var selected = document.getSelection();
+		var item = selected.anchorNode.parentNode;
+		var check = item.className;
+		switch (check) {
+			case ("fraud"):
+				event.clipboardData.setData('text/plain', "Причина обращения: "+selected+"Соглашение / Решение: Просьба проверить номер на анти-фрауд.\nСвязанные поездки / тикеты:\nТекущий статус поездки в CS (если применимо): ");
+				event.preventDefault();
+				break;
+			case ("non-fraud"):
+				event.clipboardData.setData('text/plain', "Причина обращения: "+selected+"Соглашение / Решение: Заказ не оформлен.\nСвязанные поездки / тикеты:\nТекущий статус поездки в CS (если применимо): ");
+				event.preventDefault();
+				break;
+			case ("info"):
+				event.clipboardData.setData('text/plain', "Причина обращения: "+selected+"Соглашение / Решение: Клиент проинформирован.\nСвязанные поездки / тикеты: \nТекущий статус поездки в CS (если применимо): ");
+				event.preventDefault();
+				break;
+			case ("not-paid"):
+				event.clipboardData.setData('text/plain', "Причина обращения: "+selected+"Соглашение / Решение: Заказ не оформлен.\nСвязанные поездки / тикеты: !!!ВПИСАТЬ НОМЕР ПОЕЗДКИ!!!\nТекущий статус поездки в CS (если применимо): ");
+				event.preventDefault();
+				break;
+			case ("ride-info"):
+				event.clipboardData.setData('text/plain', "Причина обращения: "+selected+"Соглашение / Решение: Клиент проинформирован.\nСвязанные поездки / тикеты: !!!ВСТАВИТЬ НОМЕР ПОЕЗДКИ!!!\nТекущий статус поездки в CS (если применимо): !!!ВПИСАТЬ СТАТУС ПОЕЗДКИ!!!");
+				event.preventDefault();
+				break;
+			case ("cancel"):
+				event.clipboardData.setData('text/plain', "Причина обращения: "+selected+"Соглашение / Решение: Отмена поездки.\nСвязанные поездки / тикеты: !!!ВСТАВИТЬ НОМЕР ПОЕЗДКИ!!!\nТекущий статус поездки в CS (если применимо): !!!ВПИСАТЬ СТАТУС ПОЕЗДКИ!!!");
+				event.preventDefault();
+				break;
+		}
+	})
+</script>
+
+
+<script>
+var submit = document.getElementsByName("confirm")[0];
+var check = true;
+var chill_inputs = [4];
+var break_inputs = [2];
+var chill_arr = [4];
+var break_arr = [2];
+var time_arr = [3];
+var inputs = [6];
+var time_codes = document.getElementsByClassName("time_codes");
+var current_time = "";
+var time_show = document.getElementById("time_show");
+var changed = document.getElementById("changed");
+var keys = ["ArrowRight", "ArrowLeft", "ArrowUp", "ArrowDown", "Backspace", "Delete", "Tab", "ShiftLeft", "ControlLeft", "ControlRight", "ShiftRight", "Space"];
+var confirm_keys = ["Enter", "NumpadEnter"];
+var main_cont = document.getElementById("schedule");
+var notification = document.getElementById("notify_text");
+var header = document.getElementsByTagName("header")[0];
+var footer = document.getElementsByTagName("footer")[0];
+var confirm = document.getElementById("Okay");
+var time_cont = [6];
+
+for (var i=0; i<chill_inputs.length; i++) {
+	chill_inputs[i] = document.getElementsByName("chill")[i];
+}
+
+for (var i=0; i<chill_inputs.length; i++) {
+	break_inputs[i] = document.getElementsByName("break")[i];
+}
+
+for (var i=0; i<time_codes.length; i++) {
+	inputs[i] = time_codes[i].getElementsByTagName("input")[0];
+	inputs[i].setAttribute("index", i);
+	
+	inputs[i].addEventListener("keyup", function(event) {
+		if (keys.indexOf(event.code) == -1 && this.value.length == 2) {
+			this.value = this.value + ":";
+		}
+		if (inputs[5].value.length == 5 && this.getAttribute("index") == 5 && confirm_keys.indexOf(event.code) != -1) {
+			submit.focus();
+		}
+		if (this.value.length == 5 && this.getAttribute("index") != 5 && confirm_keys.indexOf(event.code) != -1) {
+			inputs[inputs.indexOf(this) + 1].focus();
+		}
+	})
+}
+
+function screenChange(main_display, notify_display, color, text_color, notify_text) {
+	main_cont.style.display = main_display;
+	notification_cont.style.display = notify_display;
+	document.body.style.backgroundColor = color;
+	document.body.style.color = text_color;
+	notification.innerHTML = "<p>"+notify_text+current_time+"</p>";
+	header.style.background = "linear-gradient(180deg, #FF8E49 10%,"+color+" 90%)";
+	footer.style.background = "linear-gradient(0deg, #FF8E49 10%,"+color+" 90%)";
+}
+
+window.onload = function() {
+	a = new AudioContext();
+	screenChange("block", "none", "#FFFFFF", "#000000", "");
+}
+
+submit.onclick = function() {
+	for (i=0; i<4; i++) {
+		chill_arr[i] = document.getElementsByName("chill")[i].value+":00";
+	}
+	for (i=0; i<2; i++) {
+		break_arr[i] = document.getElementsByName("break")[i].value+":00";
+	}
+	if (check) {
+		check = false;
+		interval = setInterval(() => timeCheck(chill_arr, break_arr), 100);
+	}
+	else {
+		changed.style.display = "block";
+		hide = setTimeout(() => {changed.style.display = "none";}, 3000);
+	}
+}
+
+confirm.onclick = function() {
+	screenChange("block", "none", "#FFFFFF", "#000000");
+}
+
+function beep(vol, freq, dur, type) {
+	v = a.createOscillator();
+	u = a.createGain();
+	v.connect(u);
+	v.frequency.value=freq;
+	v.type=type;
+	u.connect(a.destination);
+	u.gain.value=vol*0.01;
+	v.start(a.currentTime);
+	v.stop(a.currentTime+dur*0.1);
+}
+
+timeCheck = function(chill_arr, break_arr) {
+	var time = new Date();
+	var time_arr = [time.getHours(), time.getMinutes(), time.getSeconds()];
+	for (var i=0; i<3; i++) {
+		if (time_arr[i]<10) {
+			current_time += "0"+time_arr[i]+":";
+		}
+		else {
+			current_time += time_arr[i]+":";
+		}
+	}
+	current_time = current_time.substring(0, current_time.length-1);
+	time_show.innerHTML = current_time;
+	if (getComputedStyle(schedule).display != "none") {
+		if (chill_arr.indexOf(current_time) != -1) {
+			beep(10, 400, 5, "triangle");
+			screenChange("none", "block", "#99FFAA", "#000000", "Перерыв: ");
+		}
+		if (break_arr.indexOf(current_time) != -1) {
+			beep(5, 400, 5, "sine");
+			screenChange("none", "block", "#99FFAA", "#000000", "Обед: ");
+		}
+		if (current_time == "08:59:30") {
+			beep(15, 500, 5, "sawtooth");
+			screenChange("none", "block", "#E3256B", "#000000", "Опять вкалывать...");
+		}
+		if (current_time == "21:00:00") {
+			beep(15, 300, 5, "sine");
+			screenChange("none", "block", "#B077F8", "#FFFFFF", "Домой!");
+		}
+	}
+	time = null;
+	current_time = "";
+/*
+‰
+
+   
+IHDR  5   w   tx&Ѓ   sRGB ®Ой   gAMA  ±Џьa   	pHYs  Г  ГЗoЁd  IDATx^нќЭЋGr…х„6 _щТЇг;?ЧкВ0`-цWрљWXмJд,ЙҐHM;єNt0:"3*«я¦єл|8Dњ€МћЙ©ОАPCк«ќгiB“Є‚жFz!дNБФrф|ЂЄ y‡‘ћ-рe>бDНuХ3ЮI!чn9 oСK3:џґЖ“%„ђб®C*h~ЊЦx‹з“&‰єXФL!ЏA}хХХАўжGeиз'-Њ–¶nюd	![Cп>Юўbюч#`
+љ—hлжЏ•ІMљ LAуmе-ЪњO §іhл„ZФ=Fk„т(ин6‘УYґuB­кЈµеh>	ъEЈ5‡:hУuЏС!„<zЗЈ5‡:hУuЏСЪгзУ,z0-ґЈD[9џ![E/БЪQў­њO=•3ОеМе„rЧа4_О™Лп€у	‡"hѕ]ПщDЩ$zтct>й‘LЁµ]МбDЩ$zNЁµ]ј™[фД?ЯФF—хjщЂє„т@и7ЎЦ0єl3·иYїЎV“зO»Џ?оЮЅЪ=эaчж·OЇ~хфк›§Чяµ{ч§Э‡?п~~і{ю¬ќєcBЛ„т(ин6ЎЦ є`x8ZѕCП' _ч„Z@ЖТ‡voїыйїЅ¦щф«`оG—4?ТЌЋ·К!„<ёвЂZ%u'Є‚жЩ№/NњO _<&УлЭOЯЖ!tNЌщ4i_ъЛпџЮюЁ›:tgrMѕък¬gЂrёеЂZ-ґЈУЈµVµзЯё›dґИЂiN&hf8iхЫэxkэЎџ&§ІиюЅЮe-;_oуs(>+|О@­кыjMЁеhљ,BкA©‡6-щЬ<№«ЂZЗh­яЉ‚є-PwB­ОЛ‘Зcц®+P4?¦(­џуЯ П»чЯ‡©ге&P,‰bI¶’
+д“=б Г›ј~П_пFШ_6«јnzџ•ч§Пэ(
+Ѓвњ
+љч±ћ^ум&Н$цѕЕ”Н'јгcГ;ЅёIЇaС&dа&4?¦(	№Z4ЇЌућ~щqзйЏ_¦KТИpЉUЩррST8Y¤@­В;ј~Гoр:ь’­mр<}?bsz„†fЅIo‡Бќб‡jќ|µоf„‘тШи•Ч№фґЦїC)PkЕњуф?ЧГIґx8AOЯЙжz„йХќPлyKKрЃZЗxЯЪаык~MџРЂ%‚жj№Н
+ш‚ҐЊм#mН…kэЅе'јРмО'п0»і§nц{†’аќ\Ує}©Чай!ЏMqЧЎ$hћРтт[t%њсф—¬'Є&Р\U6/О% ЦЃь~Nэ†·ЄЅОfЏЏ›шjі34„T#чіmЕZЏµ…юЮтмПѕРмОзм`сТM„жZ‰}*'T
+kл5ЦI6‹^ss7Ўж‰ўЉPk}њъфь[њ(IХш©юхOхБбdњж›9хUщШkу~ий-ЕBaДжЧіmЕZЈШd|ПЩЄwћ].K$6Фкђ°
+ЁuLіУPЧЎ…кNd‡lїeFЄ‚ж-ґcB­5qТ{ащSсЫz#Вpљ™OR•љCЏvўщ–fэ¶ЯЯ
+љJЎ-¤Ѓ°04‡TИ
+†9fЫЉµ‚TCГlЈЩ	МA кTШЇ<`аэfЬ$T}їЏ3Eµ(ЃfCУ$и­wкфт ЁµNzъзюd/иуь‹	N=џѕTЯїЦWмЈ‡:С|3і~Гппѓ	НЩЇУ@®о·;НЄѕљcп4©ЫЉеRКХашtjЇvУЁChЁУ&Ѕ%=_џ›0{Н ¤ЃўZ/љ
+і«ИfС§¶3Qґ¶№щфЛПaњт“Й«N"Wэ¶юJOtBТ‘wxэ†GU>ж¶Y'7xљU3‹НCЙ§€уЪ@ЭVшНR0-ќЪЫ[Ѓє*„џО®Ѕљѕ>7‰Ю& ¤ЃўZ/љ
+і«ИfБгЄIў®zР	ФZ
+ЛџюwЇь,)„QL‘?эы?чFь/ҐэЯ€j З9ЎЦD~?§~Г[UЯйc#Нcv‡[Ъу¤‚жРРk[кVт=E?mљ;#kAs‰Ѕ/иЈsьрА±NЂю"ОNЖ—|lxУАг*hоРВЬјС¦	µVЖт§янпl–к
+'ИFTргpЙЛ%фD[gЉ·4@ЏZ;ЂЄ&ЗxЯЪаOЌJHѕє_?ЎщuУж0Д0AH{mЅ’ш-ё’жj9ґp ;,4?ђќX.h~@Э	Iсl д) ЦБф±ЂЁ5ЎЦ„9 J†єЙ'ДУ|Њa
+љwР¦N›ЦЁ{sѕ~щшerф†Т`К|т?EЩdBz$yСzZjЈµ„–п‡‘»й"WШщ;Ь#Ѕ§ўзІBрё‚њцРЋ	µЋСZBЛ7dбЭфЏїДбС’Ќў0–|*m>yЎуHтўzHэcТтqCvЦ‰џѓ3г"Ј…уЙУу	Y'xbZkЎэ-7dз6,ј›ЮэoI6„ PН6DЙ‹«РkищkCFРјП`Ы—ЪзоИOAsGП'дЋАc,hЮўЧРуЇКВ»йй»8<њВаЃBЏ(4@ЎзHOЯбhэ4:фzљ>®xЏОF·shбКи‹9ґ@аI„RЏЁKИ]ЎЏпЬЬлйщWeбцж·qx8Щ¤™ќ:ѕЎо=}яџѓGУkлщdSа1 !5РЩC›ш,‘{CЬЃG·ЧЦуЇКВщTюіaдSЗ7ФќУ”ъfь\т!В4'›D‚ф4Нљ–т‚а‰4џ#7Г4їKзУЇГьрІ©c
+
+¦Р&
+
+Рб—&ѕСWп 'wL(!%›ҐxЉRфљІbфaќ{\µйPBzKО§±їьхO1ђ‚ф7ъZКР“›©ЃNІeЉ'Ў(5Aї 9!+fдYE©ЃОіp>•ї‘•GСшpъўэяЄЌћ\:»¦I¶LсHҐ&и4'дћС§y•·иВщ4рыеAH^Ўa^Уп—7)N°(‘
+R<uIЈh4wф|BЦLсЬҐЫ°p>ЌээЬлрчs3Ес%ІMљЏLAs‡:hУuЁKИк)ћШўtО§±ЯH~fj*,йКэыFЃвшЉЩ&x$@pђ6С‡ЋСљC„¬›вq-J·aб|–ьы°µВ’¶~9B“cЉЩ2x0Zл0Ыѓ!¤BVKс ҐЫ°|>ЅGИUхбПъємЯѕыhъю‡їBЮ¤(УТ'¤hоmХу)jmZбЊл}щ|Ъяя	Пъџ»/С·»зПъє0џ;З—=VкQХ{Ёш°Qч.<ГюIйн…л}щ|дgљ8H®Ј№ћМ§ рST­ъ±iVa«(к^dіWи№™p±џ4џvїФяђД…флэ
+#_Т‹џ)uЧ*ћЮЈe~.QФ=j%П3nхУжУnчуOiњ\Z?їСЧ#|yu‚љoО¦й5Ы@QФ"бV?u>	WэSѕб?Щ3В—GQ§Й†MVифйЎ(jPёХПOВВоhTяЭ	бЛЈЁ“eГЖ+фdЌwRU·ъyуйщsэ„:Eo~іи?;бЛЈЁЫ‹у‰ў."ЬкзН§=П»чЯЗsІЮяЯ~Г“_EЭ^њOuбV?>M|ь[њ4'игЏєЫI„/Џў®¤bq>QФE„[эBуIшегю§џУюк®,мя#{ѓ„/Џў®!L ж*J'лІ»QФЅ·ъежxюґырzфoGЅщНоГы%— |yu%5зPУ¬5ТїtOЉzбVїф|Rћwџћц^чоХойУпPИПUЯоТЫЯнћюёяхсПпµчB„/Џў®'ЊЌ¦BgSa	zDE‰ў[ёХЇ4џ^ЂреQФUeГГљ
+K‚љНБ¤Ё-·:зEЭNх(т~v(j;В­ОщDQ7R=rј_wRФГ·:зEЭHг#§ЩЙqEmGёХ9џ(кВИ™1ЅОБех В­ОщDQ·Ршt	ќ€azџўXёХ9џ(књ.aYкMЉzxбVз|ўЁ[hpЖд[|Љz`бVз|ўЁivЖфжђщН*E=ћp«s>QФЌT^ХыНЉz<бVз|:K_эu3^­д“4BЙTW—кІ»=ЂlЮ„aRofџў[ёХ9џОо_!шk“~–З
+ѕt‚t—Ўєqе©“п“ў^ёХ9џ¶ў0'BЪtОСew{xГ‰у‰Ъ p«s>	·ЄС,§—љУЈЧ–чRs„Вс~aъ8ИJ„P2‚oi„мЮ=№
+AZ›hљBПѕд{а›ФMѕH!РУ›CNФf…[ќуйHzmЁэHЅУЈhуҐР†Ф; ЧжэВґЃ Я;ћ^ЙыѕѕЇMSрѕoЁыЅґp i
+=_-еЄщН’Ftц†зµMбVз|:’Эюор±OC |ЏЂФ”НашФb ·е4«ЩаMДЃЬ–S“чrЫlкІЉФkрѕЏ/X¬TW9њЁ-·:зУщы"ЗЯѓ ш%€ЅІЗJЎЗ—(5Хlр¦Џ—–<№'¤>ћMН=шЄIkй%<Юm,yУ ‹ьрДсFЭЇp«s>}‘ї/r~s	bЇмГ	д’Ґі«љj6xУЗѓ%‚r)§жЩмҐ^(	>
+ХЫ”ІТ 3з–sDQw*ЬкњOЄpYшФЗ^рџцJЮGЬt|ЉXи•*,O}мS,BON}<›љ‚¬љe
+X,„ћњъxiIIіlАњ6clб9›PФK	·:зУ^zUґh6У§€}4{М	„’Oы*¦µ™ґpLСРу…ћ/фV™?Rj:X@ЙKІ|3вђ"цX[®Ґ&ѕ?идСbіB'E­SёХ9џцТ«ўEіЗ;ЎБRsЂw¬БO(хRs@p¬ЗKkBU¤…Ц«4«љ»Є•B5H©”MпдXѕ|ђM‹ЅЏёWB А7©›|‘&|j±u^PНQДEЭ‘p«s>нХј)љжЕsёЇ(жзu/В­ОщґWуjљПбЋN N"О'к^„[ќуiЇжФ47(ћГќ@=Ѓr•гЉZ§p«s>QФѓг§7rљХў?h°Ќў."ЬкњOµRЌЁоoVa6KA#=u)бVз|ўЁ•jpr@uу`u¶!шu%бVз|ўЁUk|6=#; §ЩЩ4)кzВ­ОщDQw ЮдСшZлфНЩЎЁk·:зEЭ‡N›ѓ«¬-4g‡ўn ЬкњOuOZ:0f›mГfgП§Ё«
+·:зE=ІzУЕOЇATW)кzВ­ОщDQЫ’MќЩЩ3Ы@QWnuО'ЉЪЉl&ЌћБ6Љє†p«s>QФVd#gdкд6[|Љєёp«s>QФ¶42c|ЏЕ^ѕ™ў..ЬкњOµ9Х“ЖWѓBзёОYKmPёХ9џTН ъ^юХкM	Я”ь­ЩэЫїBБ_їF>зў§w ік
+srйd]p«у5rb‹¤л=uІух6?A'?lK…[ќуIХ<с|ЁҐКпђр^ХыyVшlg?зў!И"…ЙЃN(ќ,їз4rbбАлoРм·пdЙОЧЫьќщ°Ќ·:з“Єyв7ш6PK•Я!«z/>щЩ/ЎhИrЋь №Ф\№И&ФИ‰…ЇїAіЯѕ‡Сe¶BёХ9џTНП¦8 6}њS8А;зрЋЕ!-JжЂа‹ґР*™ґcВ«†ґ(™Ійќ¦Љ«aцЉт±9Н6пXЪtММѕЄ№-шѕjж¬т‘†уO~–А±ТenЎЏCЉ
+mO)!їЕ«"(zт’эvБЇ…Sµѓх'l%ozеf‚¬Щ;…BCs•7‹R+хС`ЫU…[ќуIХ|љѓйS‹gН:ЅТ’ўТс’—•rЂ8¤Чi€}ЪSсОс%‰Cgsa6Г&„О¦УЊЅМo.чNСYЁ8Пf,AFыйtмфљйSМ!?њМ'Цi
+>mЄ^вУ‘Э |¤Б©ПЬЄф:›=E?д«НОРРл·ёЧ4Шv=бVз|RЙЈЬ$ґ™љ%3CudџbIЇtВ’§X”—ш  хҐњ†RУ©5т“ КҐ ачR	 _тiPЇTм– 
+=іІГ” XЙЛ|фV
+уЙ—|Ъу1џМрЇ4џјFv5Џґyю=Ў*{mЮ=Ѕ%P±pРЃМЇ74
+¶]OёХ9џTНG9›в…©‰Гљsѓ9ЎROнП–,ОФx„хY©шµ>i(5ќZ#п1#o№аKdѕ}М©IS(AЮma	ЄБњ•&‚p¶’жШG0%p…Џ!дз“}4еФгK&­9Љ†PjЄyЄщь}„oMЇ'”B[oО®Н
+&s|Хв Б¶л	·:з“Єщ({szЪЏR‹Mf†jXRѓм[мьbIЅ›9№Ф”ґе%Івђ†RУ©5ыі†‘·\рл6щhЃ}„¬d©Е&фщЄЕHCГ€pv¤Ѕі
+
+тСщж‚ а#Е|т[ща„*z$©Е…љ§љПЯ§AшЦфц	~ќеЄЯ°YµАWsмќ¦Ы®$ЬкњOЄжЈ\<лuС<ІЏЁXb*¶/y'—љjо&~€CJMgVЅ·ђшђҐѕd±WрgЫшЏЮпҐђ№Нњ\ВЗаЧ’Г–ZЙ+7 °Џ'М''М' ѕЌ+Я9ћBEПИт¬ж‘6Пї'Tеcn›urѓWіjf±y(щq^4Шv%бVз|RНѕBliріТыФ+ш>µx¤g6/™љ=4эЧi€}ZHЮBю]dqПo¦P6›;ш ›9ц©)›ѕ3TЅJ…ВОЖ>ИfN‹'ДЁВся5Хс*zBмУZщH{зЯ”U%рќНUБlцfw±Ґ=ЯRп4…†Щ¶+	·:з“Єщ(szач„LБ;7SђK¦мO+цxЗвђ%s@рEZи—‚‚њоЧ$¬кІйќBц–уo§рЦК©Й››к6‹Ѕ‰К%8Щх–шФzf•Џ4¤А;9ц¦9А;‹рG‚6џ`В	ќ9х`‡ слдR!©?Ш|Вѕд}kCљsд«Ш!ч{ЯW{~N{l»†p«s>Q/ с‹ѓє;a…СТ4kќ°„™(Ту‚ѓgPёХ9џЁзУ«9T
+3ыPQўL~ТNќх'nuО'кДщt/Z:$Р–dУ/«ъoRMбзЎ‘©3Ш¶бVз|ў(Є«Ґs"7зМ1іNW%¦РpІВ¶ўРp%……†nuО'Љўf480љm='ж[ђЁн·:зEQCЎљ—dЗЛЄЅj#В­ОщDQФЁ–ЏЬ\/Gµh 6"ЬкњOE-УаЙmЩ	љm 6"ЬкњOE]KaТМОћfМf‰zTбVз|ў(кFЄgLs™iтUкQ…[ќу‰ўЁ©1EЙk¤‡z бVз|ў(кF*†Ршап¤оWёХ9џ(Љєќ0]ьЊЙЋ);ўf'х`В­ОщDQФM…“U7„ЄҐp|J=Ђp«?О|"„тHp>BY#њO„BЦз!„ђх±Ыэ?Fоd±Ш    IEND®B`‚
+*/
+}
+</script>
+</body>
+</html>

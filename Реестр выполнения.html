@@ -1,0 +1,273 @@
+<html>
+<head>
+<title>Реестр выполнения</title>
+<!-- СОЗДАНО ДАВЛЕТШИНЫМ ЛИНАРОМ МАРАТОВИЧЕМ - ОПЕРАТОРОМ СЕРВИСНОЙ ЛИНИИ ЗАКАЗА ТАКСИ DIDI ПЕРВОГО УРОВНЯ -->
+<style rel="stylesheet" type="text/css">
+body
+{
+background-color: #003366;
+color: #AA6677;
+}
+#restore
+{
+margin-left: 10px;
+}
+#all_items
+{
+display: none;
+}
+#warning
+{
+display: none;
+color: #AA6633;
+}
+input
+{
+margin: 10px;
+}
+#enter_number
+{
+display: block;
+}
+#enter_numbers
+{
+display: none;
+width: 175px;
+margin: 10px;
+}
+#add_ticket
+{
+width: 175px;
+}
+#numbers
+{
+height: 200px;
+overflow-x: hidden;
+overflow-y: scroll;
+}
+#numbers > div, #result, #date
+{
+margin-left: 10px;
+}
+a:visited
+{
+color: #000000;
+}
+a:active
+{
+color: #FF0000;
+}
+a
+{
+color: #FF8E49;
+}
+</style>
+</head>
+<body alink="#00FF00" link="#FF00FF" vlink="#000000">
+<div id="restore">
+Восстановить предыдущие данные?
+<input type="button" name="restore_accepted" value="Да">
+<input type="button" name="restore_denied" value="Удалить предыдущие данные">
+</div>
+<div id="all_items">
+<div>
+<div id="input_type_cont">
+<input type="radio" name="enter_box" value="one_row" id="one_row_enter_box" checked>
+<label for="one_row_enter_box">Одна строка</label>
+<input type="radio" name="enter_box" value="few_rows" id="few_rows_enter_box">
+<label for="few_rows_enter_box">Несколько строк</label>
+</div>
+<div>
+<input type="text" name="date" value="" placeholder="Введите дату">
+<input type="button" name="enter_date" value="Ввести дату">
+</div>
+<div>
+<input type="text" name="enter_number" id="enter_number" value="" placeholder="Введите номер обращения" maxlength="18">
+<textarea id="enter_numbers" placeholder="Введите номера обращений" cols="18"></textarea>
+<input type="button" name="add_ticket" value="Проверить и добавить" id="add_ticket">
+</div>
+</div>
+<div id="warning">
+
+</div>
+<div id="date">
+
+</div>
+<div id="numbers">
+
+</div>
+<div id="result">
+Всего: 0
+</div>
+<div>
+<input type="text" name="remove_num" value="" placeholder="Введите номер обращения">
+<input type="button" name="remove" value="Удалить">
+</div>
+</div>
+<script lang="javascript">
+
+var tickets_arr = [];
+var numbers = document.getElementById("numbers");
+
+document.getElementsByName("restore_accepted")[0].onclick = function()
+{
+	document.getElementById("restore").style.display = "none";
+	document.getElementById("all_items").style.display = "block";
+	if (localStorage.getItem("tickets_arr") != null)
+	{
+		tickets_arr = JSON.parse(localStorage.getItem("tickets_arr"));
+	}
+	var tickets = numbers.getElementsByTagName("div");
+	for (i=0; i<tickets.length; i++)
+	{
+		tickets_arr.push(tickets[i].innerText);
+	}
+	var start_tickets_arr_length = tickets_arr.length;
+	var just_started = true;
+	for (start_iter=0; start_iter<start_tickets_arr_length; start_iter++)
+	{
+		parseRows(tickets_arr[start_iter], just_started);
+	}
+}
+
+document.getElementsByName("restore_denied")[0].onclick = function()
+{
+	document.getElementById("restore").style.display = "none";
+	document.getElementById("all_items").style.display = "block";
+	localStorage.removeItem("tickets_arr");
+	var tickets = numbers.getElementsByTagName("div");
+	for (i=0; i<tickets.length; i++)
+	{
+		tickets_arr.push(tickets[i].innerText);
+	}
+}
+
+var cleaning_inputs = [];
+document.getElementsByName("enter_date")[0].onclick = function()
+{
+	var date_val = document.getElementsByName("date")[0].value;
+	var date_cont = document.getElementById("date");
+	date_cont.innerHTML = "<div>"+date_val+"</div>";
+	document.getElementsByName("date")[0].disabled = true;
+	document.getElementsByName("enter_date")[0].disabled = true;
+}
+
+document.getElementById("input_type_cont").addEventListener("click", function(event)
+{
+	if (document.getElementById("one_row_enter_box").checked == true)
+	{
+		document.getElementById("enter_number").style.display = "block";
+		document.getElementById("enter_numbers").style.display = "none";
+	}
+	if (document.getElementById("few_rows_enter_box").checked == true)
+	{
+		document.getElementById("enter_number").style.display = "none";
+		document.getElementById("enter_numbers").style.display = "block";
+	}
+});
+
+document.getElementById("add_ticket").onclick = function()
+{
+	if (getComputedStyle(document.getElementById("enter_number")).display == "block")
+	{
+		oneRow();
+	}
+	if (getComputedStyle(document.getElementById("enter_numbers")).display == "block")
+	{
+		fewRows();
+	}
+}
+
+function oneRow()
+{
+	var just_started = false;
+	var enter = document.getElementsByName("enter_number")[0].value;
+	parseRows(enter, just_started);
+}
+
+function fewRows()
+{
+	var just_started = false;
+	var enter = document.getElementById("enter_numbers").value.split("\n");
+	for (parse_iter=0; parse_iter<enter.length; parse_iter++)
+	{
+		parseRows(enter[parse_iter], just_started);
+	}
+}
+
+function parseRows(enter, just_started)
+{
+	if (enter != "")
+	{
+		if (tickets_arr.indexOf(enter) == -1 || just_started == true)
+		{
+			if (just_started == false)
+			{
+				tickets_arr.push(enter);
+			}
+			numbers.innerHTML = "";
+			for (type_iter=0; type_iter<tickets_arr.length; type_iter++)
+			{
+				numbers.innerHTML += "<div><a href=\"https://www.vk.com/id"+tickets_arr[type_iter]+"\" target=\"_blank\">"+tickets_arr[type_iter]+"</a></div>";
+				cleaning_inputs.push(document.getElementById("enter_numbers"), document.getElementsByName("enter_number")[0]);
+				warningMessage("", cleaning_inputs);
+			}
+			localStorage.setItem("tickets_arr", JSON.stringify(tickets_arr));
+		}
+		else
+		{
+			if (just_started == false)
+			{
+			cleaning_inputs.push(document.getElementById("enter_numbers"), document.getElementsByName("enter_number")[0]);
+			warningMessage("Это обращение уже записано!", cleaning_inputs);
+			}
+		}
+	}
+	else
+	{
+		cleaning_inputs.push(document.getElementById("enter_numbers"), document.getElementsByName("enter_number")[0]);
+		warningMessage("Введите номер добавляемого обращения!", cleaning_inputs);
+	}
+	document.getElementById("result").innerHTML = "Всего: "+(tickets_arr.length);
+}
+
+document.getElementsByName("remove")[0].onclick = function()
+{
+	var remove_num = document.getElementsByName("remove_num")[0].value;
+	if (tickets_arr.indexOf(remove_num) != -1)
+	{
+		tickets_arr.splice(tickets_arr.indexOf(remove_num), 1);
+		numbers.innerHTML = "";
+		for (type_iter=0; type_iter<tickets_arr.length; type_iter++)
+		{
+			numbers.innerHTML += "<div><a href=\"https://www.vk.com/id"+tickets_arr[type_iter]+"\" target=\"_blank\">"+tickets_arr[type_iter]+"</a></div>";
+		}
+		cleaning_inputs.push(document.getElementsByName("remove_num")[0]);
+		warningMessage("", cleaning_inputs);
+		localStorage.setItem("tickets_arr", JSON.stringify(tickets_arr));
+	}
+	else
+	{
+		cleaning_inputs.push(document.getElementsByName("remove_num")[0]);
+		warningMessage("Введите номер удаляемого обращения!", cleaning_inputs);
+	}
+	document.getElementById("result").innerHTML = "Всего: "+(tickets_arr.length);
+}
+
+function warningMessage(message, cleaning_inputs)
+{
+	if (message != "")
+	{
+		document.getElementById("warning").innerHTML = message;
+		document.getElementById("warning").style.display = "block";
+		setTimeout(() => {document.getElementById("warning").style.display = "none";}, 3000);
+	}
+	for (clean_iter=cleaning_inputs.length-1; clean_iter>=0; clean_iter--)
+	{
+		cleaning_inputs[clean_iter].value = "";
+		cleaning_inputs.pop();
+	}
+}
+</script>
+</body>
+</html>
