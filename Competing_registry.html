@@ -1,7 +1,7 @@
 <html>
 <head>
-<title>Реестр выполнения</title>
-<!-- СОЗДАНО ДАВЛЕТШИНЫМ ЛИНАРОМ МАРАТОВИЧЕМ - ОПЕРАТОРОМ СЕРВИСНОЙ ЛИНИИ ЗАКАЗА ТАКСИ DIDI ПЕРВОГО УРОВНЯ -->
+<title>Р РµРµСЃС‚СЂ РІС‹РїРѕР»РЅРµРЅРёСЏ</title>
+<!-- РЎРћР—Р”РђРќРћ Р”РђР’Р›Р•РўРЁРРќР«Рњ Р›РРќРђР РћРњ РњРђР РђРўРћР’РР§Р•Рњ - РћРџР•Р РђРўРћР РћРњ РЎР•Р Р’РРЎРќРћР™ Р›РРќРР Р—РђРљРђР—Рђ РўРђРљРЎР DIDI РџР•Р Р’РћР“Рћ РЈР РћР’РќРЇ -->
 <style rel="stylesheet" type="text/css">
 body
 {
@@ -65,26 +65,26 @@ color: #FF8E49;
 </head>
 <body alink="#00FF00" link="#FF00FF" vlink="#000000">
 <div id="restore">
-Восстановить предыдущие данные?
-<input type="button" name="restore_accepted" value="Да">
-<input type="button" name="restore_denied" value="Удалить предыдущие данные">
+Р’РѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂРµРґС‹РґСѓС‰РёРµ РґР°РЅРЅС‹Рµ?
+<input type="button" name="restore_accepted" value="Р”Р°">
+<input type="button" name="restore_denied" value="РЈРґР°Р»РёС‚СЊ РїСЂРµРґС‹РґСѓС‰РёРµ РґР°РЅРЅС‹Рµ">
 </div>
 <div id="all_items">
 <div>
 <div id="input_type_cont">
 <input type="radio" name="enter_box" value="one_row" id="one_row_enter_box" checked>
-<label for="one_row_enter_box">Одна строка</label>
+<label for="one_row_enter_box">РћРґРЅР° СЃС‚СЂРѕРєР°</label>
 <input type="radio" name="enter_box" value="few_rows" id="few_rows_enter_box">
-<label for="few_rows_enter_box">Несколько строк</label>
+<label for="few_rows_enter_box">РќРµСЃРєРѕР»СЊРєРѕ СЃС‚СЂРѕРє</label>
 </div>
 <div>
-<input type="text" name="date" value="" placeholder="Введите дату">
-<input type="button" name="enter_date" value="Ввести дату">
+<input type="text" name="date" value="" placeholder="Р’РІРµРґРёС‚Рµ РґР°С‚Сѓ">
+<input type="button" name="enter_date" value="Р’РІРµСЃС‚Рё РґР°С‚Сѓ">
 </div>
 <div>
-<input type="text" name="enter_number" id="enter_number" value="" placeholder="Введите номер обращения" maxlength="18">
-<textarea id="enter_numbers" placeholder="Введите номера обращений" cols="18"></textarea>
-<input type="button" name="add_ticket" value="Проверить и добавить" id="add_ticket">
+<input type="text" name="enter_number" id="enter_number" value="" placeholder="Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РѕР±СЂР°С‰РµРЅРёСЏ" maxlength="18">
+<textarea id="enter_numbers" placeholder="Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂР° РѕР±СЂР°С‰РµРЅРёР№" cols="18"></textarea>
+<input type="button" name="add_ticket" value="РџСЂРѕРІРµСЂРёС‚СЊ Рё РґРѕР±Р°РІРёС‚СЊ" id="add_ticket">
 </div>
 </div>
 <div id="warning">
@@ -97,11 +97,11 @@ color: #FF8E49;
 
 </div>
 <div id="result">
-Всего: 0
+Р’СЃРµРіРѕ: 0
 </div>
 <div>
-<input type="text" name="remove_num" value="" placeholder="Введите номер обращения">
-<input type="button" name="remove" value="Удалить">
+<input type="text" name="remove_num" value="" placeholder="Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РѕР±СЂР°С‰РµРЅРёСЏ">
+<input type="button" name="remove" value="РЈРґР°Р»РёС‚СЊ">
 </div>
 </div>
 <script lang="javascript">
@@ -219,16 +219,16 @@ function parseRows(enter, just_started)
 			if (just_started == false)
 			{
 			cleaning_inputs.push(document.getElementById("enter_numbers"), document.getElementsByName("enter_number")[0]);
-			warningMessage("Это обращение уже записано!", cleaning_inputs);
+			warningMessage("Р­С‚Рѕ РѕР±СЂР°С‰РµРЅРёРµ СѓР¶Рµ Р·Р°РїРёСЃР°РЅРѕ!", cleaning_inputs);
 			}
 		}
 	}
 	else
 	{
 		cleaning_inputs.push(document.getElementById("enter_numbers"), document.getElementsByName("enter_number")[0]);
-		warningMessage("Введите номер добавляемого обращения!", cleaning_inputs);
+		warningMessage("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РґРѕР±Р°РІР»СЏРµРјРѕРіРѕ РѕР±СЂР°С‰РµРЅРёСЏ!", cleaning_inputs);
 	}
-	document.getElementById("result").innerHTML = "Всего: "+(tickets_arr.length);
+	document.getElementById("result").innerHTML = "Р’СЃРµРіРѕ: "+(tickets_arr.length);
 }
 
 document.getElementsByName("remove")[0].onclick = function()
@@ -249,9 +249,9 @@ document.getElementsByName("remove")[0].onclick = function()
 	else
 	{
 		cleaning_inputs.push(document.getElementsByName("remove_num")[0]);
-		warningMessage("Введите номер удаляемого обращения!", cleaning_inputs);
+		warningMessage("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ СѓРґР°Р»СЏРµРјРѕРіРѕ РѕР±СЂР°С‰РµРЅРёСЏ!", cleaning_inputs);
 	}
-	document.getElementById("result").innerHTML = "Всего: "+(tickets_arr.length);
+	document.getElementById("result").innerHTML = "Р’СЃРµРіРѕ: "+(tickets_arr.length);
 }
 
 function warningMessage(message, cleaning_inputs)
